@@ -20,7 +20,6 @@ This project is an AWS Lambda-based solution that converts text files stored in 
 
 ![image](https://github.com/user-attachments/assets/31ccd556-6736-466b-a87e-828205bd14ee)
 
-
 ## AWS Services Used
 - **Amazon S3**: Storage for input text files and output MP3 files.
 - **AWS Lambda**: Serverless compute function to process text and invoke Polly.
@@ -117,6 +116,10 @@ def lambda_handler(event, context):
     
     return {"statusCode": 200, "body": "Text-to-Speech conversion completed!"}
 ```
+
+##Sreenshots
+![image] (file:///Users/user/Desktop/Screenshot%202025-02-01%20at%205.25.24%E2%80%AFPM.png]
+![image] (file:///Users/user/Desktop/Screenshot%202025-02-01%20at%205.26.08%E2%80%AFPM.png)
 
 ## Future Enhancements
 - Add support for different languages and voices.
