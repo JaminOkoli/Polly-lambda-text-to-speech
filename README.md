@@ -50,8 +50,8 @@ Create an IAM role with the following policy:
       "Effect": "Allow",
       "Action": ["s3:GetObject", "s3:PutObject"],
       "Resource": [
-        "arn:aws:s3:::your-source-bucket-name/*",
-        "arn:aws:s3:::your-destination-bucket-name/*"
+        "arn:aws:s3:::enzo-polly-source-bucket
+        "arn:aws:s3:::enzo-polly-destination-bucket/*"
       ]
     },
     {
