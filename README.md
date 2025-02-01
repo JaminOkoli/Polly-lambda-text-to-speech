@@ -1,4 +1,4 @@
-# Polly-lambda-text-to-speech Project
+# Polly-Lambda-text-to-speech Project
 
 ## Overview
 This project is an AWS Lambda-based solution that converts text files stored in an S3 bucket into speech using Amazon Polly. The synthesized speech is then saved as an MP3 file in a designated S3 bucket. This automation enables seamless text-to-speech (TTS) processing with minimal manual intervention.
@@ -50,7 +50,7 @@ Create an IAM role with the following policy:
       "Effect": "Allow",
       "Action": ["s3:GetObject", "s3:PutObject"],
       "Resource": [
-        "arn:aws:s3:::enzo-polly-source-bucket
+        "arn:aws:s3:::enzo-polly-source-bucket/*'
         "arn:aws:s3:::enzo-polly-destination-bucket/*"
       ]
     },
@@ -79,6 +79,16 @@ Create an IAM role with the following policy:
 1. Upload a `.txt` file to the **source S3 bucket**.
 2. Lambda will process the file and generate an MP3 output.
 3. The generated audio file will be available in the **destination S3 bucket**.
+
+
+## Checking Deployment Status in CloudWatch
+To monitor the deployment and ensure everything is working correctly, you can use **Amazon CloudWatch**:
+1. Navigate to the [AWS CloudWatch Console](https://console.aws.amazon.com/cloudwatch/).
+2. In the **Logs** section, click on **Log Groups**.
+3. Find and select the log group associated with your Lambda function (e.g., `/aws/lambda/your-lambda-function-name`).
+4. Click on the latest **Log Stream** to view real-time logs.
+5. Check for any errors or debug messages to troubleshoot issues.
+6. You can also set up **CloudWatch Alarms** to notify you of failures or high execution times.
 
 ## Example Lambda Function (Python)
 ```python
@@ -117,10 +127,11 @@ def lambda_handler(event, context):
 This project is open-source and available under the MIT License.
 
 ## Contributing
-Feel free to fork the repository, create issues, or submit pull requests for improvements!
+Feel free to fork the repository, create issues, or make recommendations for improvment!
 
 ---
 
 This README provides a clear, structured overview of your project while making it more personal and detailed. Let me know if you'd like any modifications!
+  
 
-
+Follow my LinkedIn: https://www.linkedin.com/in/ben-okoli/
