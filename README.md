@@ -18,6 +18,9 @@ This project is an AWS Lambda-based solution that converts text files stored in 
    - Saves the generated MP3 file to the **destination S3 bucket**.
 4. The MP3 file is now available for download or playback.
 
+![image](https://github.com/user-attachments/assets/31ccd556-6736-466b-a87e-828205bd14ee)
+
+
 ## AWS Services Used
 - **Amazon S3**: Storage for input text files and output MP3 files.
 - **AWS Lambda**: Serverless compute function to process text and invoke Polly.
@@ -34,8 +37,8 @@ This project is an AWS Lambda-based solution that converts text files stored in 
 ## Deployment Instructions
 ### 1. Set Up S3 Buckets
 Create two S3 buckets:
-- `your-source-bucket-name`
-- `your-destination-bucket-name`
+- `enzo-polly-source-bucket`
+- `enzo-polly-destination-bucket`
 
 ### 2. Configure IAM Role
 Create an IAM role with the following policy:
@@ -64,8 +67,8 @@ Create an IAM role with the following policy:
 1. Create an AWS Lambda function using Python.
 2. Upload the `lambda_function.py` script.
 3. Set up environment variables:
-   - `SOURCE_BUCKET`: `your-source-bucket-name`
-   - `DESTINATION_BUCKET`: `your-destination-bucket-name`
+   - `SOURCE_BUCKET`: `enzo-polly-source-bucket`
+   - `DESTINATION_BUCKET`: `enzo-polly-destination-bucket`
 4. Assign the IAM role to Lambda.
 
 ### 4. Configure S3 Event Trigger
