@@ -119,7 +119,7 @@ def lambda_handler(event, context):
 
 ##Sreenshots
 ![image](https://github.com/JaminOkoli/Polly-lambda-text-to-speech/blob/main/screenshot.png)
-![image](https://github.com/JaminOkoli/Polly-lambda-text-to-speech/blob/main/screenshot.png)
+![image](https://github.com/JaminOkoli/Polly-lambda-text-to-speech/blob/main/screenshot1.png)
 
 ## Future Enhancements
 - Add support for different languages and voices.
